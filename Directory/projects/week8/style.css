@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Dosis-Bold';
+  src: url('./assets/fonts/Dosis-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: "Dosis-Bold";
+  margin:0;
+  background: linear-gradient(180deg, #87CEEB 0%, #900C3F 33%, #191970 56%, #000000 100%);
+}
+
+#container{
+  visibility:hidden;
+  margin-top:30vh;
+}
+
+#route{
+  position:absolute;
+  width: 500vw;
+  overflow: visible;
+}
+
+.tree{
+  fill: green;
+  stroke: #1c5a1c;
+  stroke-width: 6;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- First Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="name">Pikachu</div>
+                <div class="hp">40 HP ⚡</div>
+            </div>
+            <img src="./assets/images/pikachu.jpg" alt="Pikachu" class="image">
+            <div class="description">Mouse Pokémon. Length: 1' 4". Weight: 13 lbs.</div>
+            <div class="attack">
+                <div class="attack-cost">✪</div>
+                <div><h3>Gnaw</h3></div>
+                <div>10</div>
+            </div>
+            <div class="attack">
+                <div class="attack-cost">✪✪</div>
+                <div><h3>Thunder Jolt</h3></div>
+                <div>30</div>
+            </div>
+
+            <!-- Weakness, Resistance, and Retreat Cost -->
+            <div class="card-stats">
+                <div class="weakness">
+                    <div><strong>Weakness:</strong></div>
+                    <div>Ground</div>
+                </div>
+                <div class="resistance">
+                    <div><strong>Resistance:</strong></div>
+                    <div>Flying</div>
+                </div>
+                <div class="retreat">
+                    <div><strong>Retreat Cost:</strong></div>
+                    <div>1</div>
+                </div>
+            </div>
+
+            <div class="footer">
+                When several of these Pokémon gather, their electricity can cause lightning storms.
+            </div>
+        </div>
+
+        <!-- Stacked Card Illusion -->
+        <div class="card-back" ><img src="./assets/images/logo.png" alt="logo" class="logo"></div>
+        <div class="card-back"></div>
+        <div class="card-back"></div>
+        <div class="swipe-hint swipe-left">← Swipe</div>
+        <div class="swipe-hint swipe-right">Swipe →</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

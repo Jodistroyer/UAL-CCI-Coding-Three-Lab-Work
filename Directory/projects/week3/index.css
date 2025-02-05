@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Portrait Container */
+.portrait {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    z-index: 2;
+}
+
+/* Head */
+.head {
+    position: relative;
+    width: 150px;
+    height: 180px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* Hair */
+.hair {
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    width: 120px;
+    height: 60px;
+    background-color: #3d2b1f;
+    border-radius: 60% 60% 30% 30%;
+}
+
+/* Eyes */
+.eye {
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    top: 60px;
+}
+
+.left-eye {
+    left: 40px;
+}
+
+.right-eye {
+    right: 40px;
+}
+
+.eye::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mouth */
+.mouth {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #d95f5f;
+    border-radius: 50%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Neck & Body */
+.neck {
+    width: 50px;
+    height: 40px;
+    background-color: #ffcc99;
+    margin: 0 auto;
+}
+
+.body {
+    width: 120px;
+    height: 120px;
+    background-color: #4a90e2;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* Triangle Styles */
+.triangle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 200px solid;
+    opacity: 0.8;
+    animation: flicker 1s infinite alternate ease-in-out, sway 3s infinite ease-in-out;
+}
+
+/* Flickering effect */
+@keyframes flicker {
+    0% { opacity: 0.6; transform: scaleY(1.1); }
+    50% { opacity: 1; transform: scaleY(1.5); }
+    100% { opacity: 0.7; transform: scaleY(0.9); }
+}
+
+/* Swaying effect to simulate fire movement */
+@keyframes sway {
+    0% { transform: rotate(-3deg) translateY(0px); }
+    50% { transform: rotate(3deg) translateY(-50px); }
+    100% { transform: rotate(-3deg) translateY(0px); }
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.triangle:nth-child(1) { left: 5%; border-bottom-color: #FF8C00; }
+.triangle:nth-child(2) { left: 10%; border-bottom-color: #FFA500; }
+.triangle:nth-child(3) { left: 15%; border-bottom-color: #FF7F50; }
+.triangle:nth-child(4) { left: 20%; border-bottom-color: #FF4500; }
+.triangle:nth-child(5) { left: 25%; border-bottom-color: #FF8C00; }
+.triangle:nth-child(6) { left: 30%; border-bottom-color: #FFD700; }
+.triangle:nth-child(7) { left: 35%; border-bottom-color: #FF6347; }
+.triangle:nth-child(8) { left: 40%; border-bottom-color: #FF4500; }
+.triangle:nth-child(9) { left: 45%; border-bottom-color: #FF7F50; }
+.triangle:nth-child(10) { left: 50%; border-bottom-color: #FFA500; }
+.triangle:nth-child(11) { left: 55%; border-bottom-color: #FF8C00; }
+.triangle:nth-child(12) { left: 60%; border-bottom-color: #FFD700; }
+.triangle:nth-child(13) { left: 65%; border-bottom-color: #FF6347; }
+.triangle:nth-child(14) { left: 70%; border-bottom-color: #FF4500; }
+.triangle:nth-child(15) { left: 75%; border-bottom-color: #FF7F50; }
+.triangle:nth-child(16) { left: 80%; border-bottom-color: #FF6347; }
+.triangle:nth-child(17) { left: 85%; border-bottom-color: #FF4500; }
+.triangle:nth-child(18) { left: 90%; border-bottom-color: #FF7F50; }
+.triangle:nth-child(19) { left: 0%; border-bottom-color: #FF7F50; }
+
+
+/* Word Style */
+.help-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    z-index: 9;
+}
+
+/* Monster */
+.monster {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+}
+
+.monster-eyes {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.monster-eyes .eye {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px red;
+    animation: eye-glow 1.5s infinite alternate;
+}
+
+/* Flickering glow effect */
+@keyframes eye-glow {
+    from { box-shadow: 0px 0px 10px red; }
+    to { box-shadow: 0px 0px 30px red; }
+}
+
+

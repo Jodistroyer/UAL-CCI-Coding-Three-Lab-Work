@@ -1,0 +1,53 @@
+main {
+    position: fixed;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./assets/cour.ttf') format('truetype');
+}
+
+body {
+    font-family: 'MyCustomFont', 'Courier New', Courier, monospace;
+}
+
+button {
+    font-family: 'MyCustomFont';
+    src: url('./assets/cour.ttf') format('truetype');
+}
+
+h2 {
+    font-size: 2em;
+    color: #ffcc00;
+}
+
+p {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+}
+
+.text {
+    min-width: 300px
+}
+
