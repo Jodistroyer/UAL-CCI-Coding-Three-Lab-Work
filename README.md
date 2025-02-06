@@ -1,6 +1,6 @@
 # 6 Web Development Projects  
-[Access this repository here](https://cci.arts.ac.uk/~jowong/index.html)
-This repository contains various web development projects covering HTML, CSS, JavaScript, GSAP, interactivity, animations, and 3D design.
+- [Access the website to view it all here](https://cci.arts.ac.uk/~jowong/index.html)
+- This repository contains various web development projects covering HTML, CSS, JavaScript, GSAP, interactivity, animations, and 3D design.
 
 ## Projects
 
